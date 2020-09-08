@@ -21,5 +21,8 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.index),
     path('movie_suggestion', views.movie_suggestion),
-    path('time', views.get_time)
+    path('time', views.get_time),
+    path('colors', views.color_selector),
+    path('set_color', views.set_color),
+    path('reset', views.reset)
 ]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if request.session.color != None %}
+        <h1 style="color: {{ request.session.color }}">Select a color!</h1>
+    {% else %}
+        <h1>Select a color!</h1>
+    {% endif %}
+    <form action="/set_color" method="post">
+        {% csrf_token %}
+        <input type="color" name="color" />
+        <input type="submit" value="Set Color" />
+    </form>
+    <a href="/reset"><button>Reset Color</button></a>
+</body>
+</html>
