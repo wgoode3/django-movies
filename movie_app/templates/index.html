@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Suggest a Movie:</h1>
+    <form action="/movie_suggestion" method="post">
+        {% csrf_token %}
+        <p>
+            Title: <input type="text" name="title" />
+        </p>
+        <p>
+            Year: <input type="number" name="year" />
+        </p>
+        <p>
+            Your Rating: <select name="rating">
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+            </select>
+        </p>
+        <input type="submit" value="Suggest movie" />
+    </form>
+</body>
+</html>
